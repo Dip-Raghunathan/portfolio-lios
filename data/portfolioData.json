@@ -1,0 +1,115 @@
+{
+  "personal": {
+    "name": "Alex Morgan",
+    "role": "Full-Stack Web Developer",
+    "tagline": "Crafting clean, accessible, and high-performance digital experiences from frontend to backend.",
+    "bio": "Hello! I am a passionate software developer who loves building web applications that solve real-world problems. With a solid foundation in modern JavaScript/TypeScript, UI/UX aesthetics, and scalable backend services, I turn ideas into elegant code.",
+    "email": "alex.morgan.dev@example.com",
+    "location": "San Francisco, CA / Remote",
+    "availability": "Available for full-time roles & freelance contracts",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
+    "socials": {
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "email": "mailto:alex.morgan.dev@example.com"
+    }
+  },
+  "stats": [
+    { "label": "Years Experience", "value": "3+" },
+    { "label": "Projects Completed", "value": "24+" },
+    { "label": "GitHub Repositories", "value": "35+" },
+    { "label": "Client Satisfaction", "value": "100%" }
+  ],
+  "skillCategories": [
+    {
+      "category": "Frontend Development",
+      "skills": [
+        { "name": "HTML5 & CSS3", "level": 95, "icon": "🌐" },
+        { "name": "JavaScript (ES6+)", "level": 90, "icon": "⚡" },
+        { "name": "React / Next.js", "level": 85, "icon": "⚛️" },
+        { "name": "Tailwind / Modern CSS", "level": 90, "icon": "🎨" }
+      ]
+    },
+    {
+      "category": "Backend & APIs",
+      "skills": [
+        { "name": "Node.js & Express", "level": 88, "icon": "🟢" },
+        { "name": "RESTful APIs", "level": 92, "icon": "🔌" },
+        { "name": "PostgreSQL & MongoDB", "level": 80, "icon": "🗄️" },
+        { "name": "Authentication & JWT", "level": 85, "icon": "🔐" }
+      ]
+    },
+    {
+      "category": "Tools & Deployment",
+      "skills": [
+        { "name": "Git & GitHub", "level": 90, "icon": "🐙" },
+        { "name": "Docker & Containers", "level": 75, "icon": "🐳" },
+        { "name": "Render / Vercel / Cloud", "level": 85, "icon": "☁️" },
+        { "name": "CI/CD Workflows", "level": 80, "icon": "🚀" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "CloudPulse - Analytics Dashboard",
+      "description": "Real-time SaaS analytics dashboard with interactive metrics, data filtering, and high-performance charting.",
+      "category": "fullstack",
+      "tags": ["Node.js", "Express", "Chart.js", "REST API"],
+      "demoUrl": "https://example.com/demo-cloudpulse",
+      "githubUrl": "https://github.com",
+      "featured": true
+    },
+    {
+      "id": "project-2",
+      "title": "Zenith - Task & Productivity Suite",
+      "description": "Collaborative kanban and task manager with live updates, drag-and-drop boards, and team workspaces.",
+      "category": "frontend",
+      "tags": ["JavaScript", "HTML5 Drag-Drop", "CSS Grid", "LocalStorage"],
+      "demoUrl": "https://example.com/demo-zenith",
+      "githubUrl": "https://github.com",
+      "featured": true
+    },
+    {
+      "id": "project-3",
+      "title": "QuickPay - Checkout & Payment Gateway API",
+      "description": "Lightweight, secure microservice for handling webhook payments, mock charges, and receipt generation.",
+      "category": "backend",
+      "tags": ["Node.js", "Express", "Stripe API", "Security"],
+      "demoUrl": "https://example.com/demo-quickpay",
+      "githubUrl": "https://github.com",
+      "featured": true
+    },
+    {
+      "id": "project-4",
+      "title": "DevSnippet - Code Sharing Platform",
+      "description": "Clean developer utility for sharing syntax-highlighted code snippets with expiry controls and markdown previews.",
+      "category": "fullstack",
+      "tags": ["Vanilla JS", "Prism.js", "Express", "JSON Storage"],
+      "demoUrl": "https://example.com/demo-devsnippet",
+      "githubUrl": "https://github.com",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "period": "2023 - Present",
+      "role": "Full-Stack Software Engineer",
+      "company": "TechNova Labs",
+      "description": "Developed customer-facing web services, architected micro-APIs with Express/Node, and improved page speed by 40%."
+    },
+    {
+      "period": "2021 - 2023",
+      "role": "Frontend Developer",
+      "company": "PixelCraft Studios",
+      "description": "Designed accessible, responsive web interfaces and modern dashboards for international clients."
+    },
+    {
+      "period": "2020 - 2021",
+      "role": "Junior Web Developer",
+      "company": "Freelance & Open Source",
+      "description": "Built responsive landing pages, automated client workflows, and contributed to open-source UI libraries."
+    }
+  ]
+}

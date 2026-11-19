@@ -1,0 +1,23 @@
+{
+  "name": "developer-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive full-stack developer portfolio with Node.js/Express backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "express",
+    "fullstack",
+    "website"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

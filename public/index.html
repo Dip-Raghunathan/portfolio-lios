@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio | Full-Stack Engineer</title>
+  <meta name="description" content="Personal full-stack developer portfolio showcasing modern web apps, APIs, and clean engineering." />
+  <!-- Google Fonts Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name" id="nav-brand-name">DevPortfolio</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Journey</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme toggle button -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+          <span class="theme-icon-sun">☀️</span>
+          <span class="theme-icon-moon">🌙</span>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+
+        <!-- Mobile hamburger menu -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-text-content">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span id="hero-availability">Available for new opportunities</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Hey, I'm <span class="gradient-text" id="hero-name">Alex Morgan</span>
+        </h1>
+        <h2 class="hero-subtitle" id="hero-role">Full-Stack Web Developer</h2>
+        
+        <p class="hero-tagline" id="hero-tagline">
+          Crafting clean, accessible, and high-performance digital experiences from frontend to backend.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Contact Me</span>
+          </a>
+          <button id="btn-quick-inbox" class="btn btn-outline" title="Inspect incoming messages stored in backend">
+            <span>📬 Backend Inbox (<span id="inbox-count">0</span>)</span>
+          </button>
+        </div>
+
+        <!-- Social link buttons -->
+        <div class="hero-socials" id="hero-socials">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-ring"></div>
+          <img id="hero-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Alex Morgan Avatar" class="hero-avatar-img" />
+          <div class="avatar-floating-card tech-badge-float">
+            <span class="tech-icon">⚡</span>
+            <div>
+              <p class="badge-title">Tech Stack</p>
+              <p class="badge-sub">Node • React • APIs</p>
+            </div>
+          </div>
+          <div class="avatar-floating-card status-badge-float">
+            <span class="tech-icon">🚀</span>
+            <div>
+              <p class="badge-title">Live Backend</p>
+              <p class="badge-sub" id="backend-ping">Checking status...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="container">
+      <div class="stats-grid" id="stats-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WHO I AM</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card main-about">
+          <h3>Passionate About Building Things That Matter</h3>
+          <p id="about-bio" class="about-description">
+            Loading profile information...
+          </p>
+
+          <div class="about-meta-grid">
+            <div class="meta-item">
+              <span class="meta-icon">📍</span>
+              <div>
+                <span class="meta-label">Location</span>
+                <p id="about-location" class="meta-value">Loading...</p>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">✉️</span>
+              <div>
+                <span class="meta-label">Email</span>
+                <p id="about-email" class="meta-value">Loading...</p>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">💼</span>
+              <div>
+                <span class="meta-label">Working Status</span>
+                <p id="about-status" class="meta-value">Open to projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards-side">
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h4>Clean Architecture</h4>
+            <p>Well-structured, documented code that scales seamlessly from prototype to production.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h4>Responsive Design</h4>
+            <p>Pixel-perfect layouts optimized for mobile devices, tablets, and wide monitors.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h4>Performance First</h4>
+            <p>Fast load times, optimized server endpoints, and smooth interactions throughout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">MY EXPERTISE</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-subtitle">A balanced toolkit for crafting modern end-to-end digital experiences.</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-categories-grid" id="skills-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">MY WORK</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Real-world projects demonstrating clean UI, backend integration, and code quality.</p>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Project Filters -->
+      <div class="project-filters" id="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CAREER PATH</span>
+        <h2 class="section-title">Experience & Journey</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline" id="experience-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Have a project idea, question, or job opportunity? Send a message directly below.</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info-panel">
+          <h3>Ready to start something great?</h3>
+          <p>I'm always interested in hearing about new ideas, collaboration opportunities, and solving technical challenges.</p>
+
+          <div class="contact-direct-items">
+            <div class="contact-item">
+              <span class="contact-item-icon">📧</span>
+              <div>
+                <span class="contact-label">Email Me</span>
+                <a id="contact-link-email" href="#" class="contact-value">contact@example.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">📍</span>
+              <div>
+                <span class="contact-label">Location</span>
+                <span id="contact-panel-location" class="contact-value">San Francisco, CA / Remote</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">🟢</span>
+              <div>
+                <span class="contact-label">Status</span>
+                <span id="contact-panel-status" class="contact-value">Open for work</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="server-badge-card">
+            <div class="server-badge-header">
+              <span class="pulse-indicator"></span>
+              <strong>Backend Status: Live API Connected</strong>
+            </div>
+            <p class="server-badge-desc">Form submissions are stored and handled by the Node/Express backend in real time.</p>
+          </div>
+        </div>
+
+        <div class="contact-form-panel">
+          <form id="contact-form" class="styled-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Hi! I came across your portfolio and would love to chat about..." required></textarea>
+            </div>
+
+            <div class="form-feedback" id="form-feedback"></div>
+
+            <button type="submit" id="btn-submit" class="btn btn-primary btn-block">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loader"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inbox Modal (Backend Verification Drawer) -->
+  <div class="modal-overlay" id="inbox-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>📬 Backend Messages Inbox</h3>
+          <span class="modal-badge">Live API View</span>
+        </div>
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro">Messages sent through the contact form are stored in the backend (<code>data/messages.json</code>). You can inspect them below:</p>
+        <div id="modal-messages-list" class="modal-messages-container">
+          <p class="empty-state">No messages received yet. Submit one from the contact form!</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-refresh-inbox" class="btn btn-sm btn-outline">🔄 Refresh</button>
+        <button id="btn-clear-inbox" class="btn btn-sm btn-danger">🗑️ Clear Inbox</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p>&copy; <span id="current-year"></span> <strong id="footer-name">Alex Morgan</strong>. All rights reserved.</p>
+        <p class="footer-sub">Built with vanilla HTML/CSS/JS frontend & Node.js/Express backend.</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
